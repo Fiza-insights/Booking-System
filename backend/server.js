@@ -15,6 +15,8 @@ app.get("/api/health", function (req, res) {
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/doctors", require("./routes/doctors"));
 app.use("/api/bookings", require("./routes/bookings"));
+app.use("/api/admin/reports", require("./routes/reports"));
+app.use("/api/admin", require("./routes/admin"));
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, function (err) {
